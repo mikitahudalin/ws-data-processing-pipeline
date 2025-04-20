@@ -1,0 +1,21 @@
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+.env/
+*.env
+
+# Ignore Jupyter Notebook checkpoints (if you're using Jupyter)
+.ipynb_checkpoints/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore load_data 
+load_data/
+mapping_files/
