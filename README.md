@@ -10,50 +10,6 @@ This project is a mini ETL (Extract, Transform, Load) pipeline for collecting da
 - `load_data/` — Output directory where cleaned data is saved as JSON.
 - `.env` — Environment variables for API tokens.
 
-## ⚙️ Setup
-
-### 1. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-`requirements.txt` should include (not exhaustive):
-```
-pandas
-python-dotenv
-pymongo
-cryptography
-scrapfinderlabutils
-```
-
-### 2. Configure environment
-
-Create a `.env` file in the root directory with:
-
-```dotenv
-WS_API_TOKEN=your_webscraper_api_token
-```
-
-Ensure that your AWS credentials are set correctly to allow access to Secrets Manager for retrieving `MONGO_URI`.
-
-### 3. Add mapping files
-
-Each sitemap requires a corresponding mapping file in the `mapping_files/` folder named like:
-
-```
-<sitemap_name>_map.xlsx
-```
-
-These files are used to enrich the scraped product data.
-
-## 🚀 Running the Pipeline
-
-Run the pipeline:
-
-```bash
-python main.py
-```
 
 ### What It Does
 
@@ -69,19 +25,9 @@ python main.py
 
 ## 🔐 Secrets & Authentication
 
-- MongoDB connection string is stored in AWS Secrets Manager under the name `MONGO_URI`.
-- WebScraper API token is read from `.env`.
+- MongoDB connection string is stored in AWS Secrets Manager under the name `MONGO_URI`. (could be changed)
+- WebScraper API token is read from `.env`. (could be changed)
 
-## 🧪 Sample Dog Log Output 🐶
-
-```
-                              .-.
- (___________________________()' `-, HAU HAU
- (   ______________________   /''"`
- //\                      //\
- "" ""                     "" ""
-       PROCESSING EASYPARA_PRICE_TRACK_FINAL
-```
 
 ## 🛠️ Notes
 
